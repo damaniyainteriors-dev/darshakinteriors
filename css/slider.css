@@ -1,0 +1,246 @@
+/* ==========================================================================
+   DARSHAK DAMANIYA — Pure Image Hero Slider Stylesheet (No Text On Slides)
+   ========================================================================== */
+
+.hero-slider-section {
+  position: relative;
+  width: 100%;
+  height: 78vh;
+  min-height: 520px;
+  max-height: 820px;
+  overflow: hidden;
+  background-color: #0f172a;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Individual Slide (Pure Image Showcase) */
+.slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1), visibility 1.2s;
+  z-index: 1;
+}
+
+.slide.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+
+/* High Resolution Background Image with Smooth Subtle Zoom */
+.slide-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  transform: scale(1.06);
+  transition: transform 7s ease-out;
+}
+
+.slide.active .slide-bg {
+  transform: scale(1);
+}
+
+/* Minimal Gradient at Bottom for Clean Dot/Arrow Visibility */
+.slide-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.45) 0%, transparent 25%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* ==========================================================================
+   SLIDER CONTROLS (Arrows, Dots, Progress, Counter)
+   ========================================================================== */
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1.5px solid var(--gold-primary);
+  border-radius: 50%;
+  color: var(--gold-primary);
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all var(--transition-normal);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.slider-arrow:hover {
+  background: var(--gold-gradient);
+  color: #ffffff;
+  border-color: transparent;
+  transform: translateY(-50%) scale(1.12);
+  box-shadow: 0 6px 20px rgba(184, 134, 11, 0.4);
+}
+
+.slider-prev {
+  left: 28px;
+}
+
+.slider-next {
+  right: 28px;
+}
+
+/* Slider Bottom Control Bar */
+.slider-bottom-controls {
+  position: absolute;
+  bottom: 24px;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.slider-bottom-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: auto;
+}
+
+/* Pagination Dots */
+.slider-dots {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 8px 18px;
+  border-radius: 50px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(184, 134, 11, 0.3);
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid var(--gold-primary);
+  background: transparent;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.dot.active {
+  background: var(--gold-primary);
+  transform: scale(1.3);
+  box-shadow: 0 0 10px rgba(184, 134, 11, 0.6);
+}
+
+/* Slider Number Counter */
+.slider-counter {
+  font-family: var(--font-accent);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-title);
+  letter-spacing: 0.12em;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 8px 20px;
+  border-radius: 50px;
+  border: 1px solid rgba(184, 134, 11, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(8px);
+}
+
+.slider-counter .current {
+  color: var(--gold-primary);
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.slider-counter .total {
+  color: var(--text-muted);
+}
+
+/* Auto Slide Progress Bar */
+.slider-progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  z-index: 15;
+}
+
+.slider-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: var(--gold-gradient);
+  box-shadow: 0 0 10px rgba(184, 134, 11, 0.8);
+  transition: width 0.1s linear;
+}
+
+/* Quick Features Highlight Strip below Slider */
+.hero-highlights-strip {
+  background: #ffffff;
+  border-bottom: 1px solid var(--border-light);
+  padding: 24px 0;
+  position: relative;
+  z-index: 20;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.highlight-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 14px;
+}
+
+.highlight-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 8px;
+  background: rgba(184, 134, 11, 0.1);
+  border: 1.5px solid var(--border-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold-primary);
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.highlight-info h5 {
+  font-family: var(--font-accent);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-title);
+  margin-bottom: 2px;
+}
+
+.highlight-info p {
+  font-size: 0.825rem;
+  color: var(--text-muted);
+  line-height: 1.3;
+}
