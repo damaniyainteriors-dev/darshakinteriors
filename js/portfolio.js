@@ -1,9 +1,11 @@
 /**
- * DARSHAK DAMANIYA INTERIOR — Portfolio Filter & Lightbox Gallery
+ * DARSHAK DAMANIYA INTERIOR — Portfolio Filter & Dual-Media Lightbox Gallery
  * Features:
- * - Category tab filtering with smooth transition
- * - Lightbox modal with high-res preview, title, details, and direct WhatsApp inquiry
- * - Keyboard navigation (Esc, Left, Right)
+ * - Category & Media Type tab filtering (All, Videos, Photos, Interiors, Fabrication, Civil, Furniture, Renovation)
+ * - Dual-Media Lightbox Modal supporting high-res photos and full HD on-site project videos
+ * - Automatic video playback management (pause/reset on modal close or slide switch)
+ * - Direct WhatsApp inquiry with auto-populated project title & category
+ * - Touch swipe & keyboard navigation (Esc, ArrowLeft, ArrowRight)
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -11,9 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const portfolioItems = document.querySelectorAll('.portfolio-item');
   const lightboxModal = document.getElementById('lightboxModal');
   const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxVideo = document.getElementById('lightboxVideo');
   const lightboxTitle = document.getElementById('lightboxTitle');
   const lightboxDesc = document.getElementById('lightboxDesc');
   const lightboxCat = document.getElementById('lightboxCat');
+  const lightboxType = document.getElementById('lightboxType');
   const lightboxWaBtn = document.getElementById('lightboxWaBtn');
   const lightboxClose = document.getElementById('lightboxClose');
   const lightboxPrev = document.getElementById('lightboxPrev');
@@ -23,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentLightboxIndex = 0;
 
   // ==========================================
-  // Category Filtering
+  // Category & Media Type Filtering
   // ==========================================
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -36,22 +40,34 @@ document.addEventListener('DOMContentLoaded', () => {
       currentVisibleItems = [];
 
       portfolioItems.forEach(item => {
-        const itemCategory = item.getAttribute('data-category');
-        const shouldShow = filterValue === 'all' || itemCategory === filterValue;
+        const itemCategory = (item.getAttribute('data-category') || '').toLowerCase();
+        const itemType = (item.getAttribute('data-type') || 'image').toLowerCase();
+
+        let shouldShow = false;
+
+        if (filterValue === 'all') {
+          shouldShow = true;
+        } else if (filterValue === 'video') {
+          shouldShow = itemType === 'video';
+        } else if (filterValue === 'photo') {
+          shouldShow = itemType === 'image';
+        } else {
+          shouldShow = itemCategory.includes(filterValue);
+        }
 
         if (shouldShow) {
           item.style.display = 'block';
           setTimeout(() => {
             item.style.opacity = '1';
             item.style.transform = 'scale(1)';
-          }, 50);
+          }, 40);
           currentVisibleItems.push(item);
         } else {
           item.style.opacity = '0';
           item.style.transform = 'scale(0.92)';
           setTimeout(() => {
             item.style.display = 'none';
-          }, 300);
+          }, 250);
         }
       });
     });
@@ -60,6 +76,15 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================
   // Lightbox Modal
   // ==========================================
+  function stopActiveVideo() {
+    if (lightboxVideo) {
+      lightboxVideo.pause();
+      lightboxVideo.removeAttribute('src');
+      lightboxVideo.load();
+      lightboxVideo.style.display = 'none';
+    }
+  }
+
   function openLightbox(index) {
     if (!currentVisibleItems.length || !lightboxModal) return;
 
@@ -67,23 +92,54 @@ document.addEventListener('DOMContentLoaded', () => {
     if (currentLightboxIndex >= currentVisibleItems.length) currentLightboxIndex = 0;
     if (currentLightboxIndex < 0) currentLightboxIndex = currentVisibleItems.length - 1;
 
+    // Reset currently playing video first
+    stopActiveVideo();
+
     const item = currentVisibleItems[currentLightboxIndex];
-    const imgEl = item.querySelector('img');
+    const mediaType = item.getAttribute('data-type') || 'image';
+    const mediaSrc = item.getAttribute('data-src') || '';
     const titleEl = item.querySelector('.portfolio-title');
     const catEl = item.querySelector('.portfolio-cat-badge');
-    const desc = item.getAttribute('data-desc') || 'High-precision interior design & craftsmanship executed by Darshak Damaniya Interior in Mumbai.';
+    const desc = item.getAttribute('data-desc') || 'Bespoke craftsmanship executed by Darshak Damaniya Interior in Mumbai.';
 
-    const imgSrc = imgEl ? imgEl.src : '';
-    const imgTitle = titleEl ? titleEl.textContent : 'Project Details';
-    const catText = catEl ? catEl.textContent : 'Interior & Fabrication';
+    const itemTitle = titleEl ? titleEl.textContent.trim() : 'Project Showcase';
+    const catText = catEl ? catEl.textContent.trim() : 'Interior & Fabrication';
 
-    if (lightboxImg) lightboxImg.src = imgSrc;
-    if (lightboxTitle) lightboxTitle.textContent = imgTitle;
+    if (lightboxTitle) lightboxTitle.textContent = itemTitle;
     if (lightboxCat) lightboxCat.textContent = catText;
     if (lightboxDesc) lightboxDesc.textContent = desc;
 
+    if (mediaType === 'video') {
+      if (lightboxImg) lightboxImg.style.display = 'none';
+      if (lightboxVideo) {
+        lightboxVideo.style.display = 'block';
+        lightboxVideo.src = mediaSrc;
+        lightboxVideo.load();
+        const playPromise = lightboxVideo.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(() => {
+            // Autoplay with sound may be blocked by browser policy until user gesture
+          });
+        }
+      }
+      if (lightboxType) {
+        lightboxType.className = 'portfolio-type-badge type-video';
+        lightboxType.innerHTML = '<i class="fa-solid fa-video"></i> Video';
+      }
+    } else {
+      if (lightboxVideo) lightboxVideo.style.display = 'none';
+      if (lightboxImg) {
+        lightboxImg.style.display = 'block';
+        lightboxImg.src = mediaSrc;
+      }
+      if (lightboxType) {
+        lightboxType.className = 'portfolio-type-badge type-photo';
+        lightboxType.innerHTML = '<i class="fa-solid fa-camera"></i> Photo';
+      }
+    }
+
     if (lightboxWaBtn) {
-      const waMsg = encodeURIComponent(`Hi Darshak Damaniya Interior, I am interested in your project: "${imgTitle}" (${catText}). Please share more details and estimated pricing.`);
+      const waMsg = encodeURIComponent(`Hi Darshak Damaniya Interior, I saw your project "${itemTitle}" (${catText}) on your website. I would like to inquire about similar work for my space and get a quotation.`);
       lightboxWaBtn.href = `https://wa.me/919867819387?text=${waMsg}`;
     }
 
@@ -93,6 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function closeLightbox() {
     if (!lightboxModal) return;
+    stopActiveVideo();
     lightboxModal.classList.remove('active');
     document.body.style.overflow = '';
   }
@@ -146,4 +203,31 @@ document.addEventListener('DOMContentLoaded', () => {
       openLightbox(currentLightboxIndex + 1);
     }
   });
+
+  // Touch swipe support for mobile
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  if (lightboxModal) {
+    lightboxModal.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    lightboxModal.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    }, { passive: true });
+  }
+
+  function handleSwipe() {
+    const swipeThreshold = 50;
+    if (touchEndX < touchStartX - swipeThreshold) {
+      // Swiped Left -> Next
+      openLightbox(currentLightboxIndex + 1);
+    }
+    if (touchEndX > touchStartX + swipeThreshold) {
+      // Swiped Right -> Prev
+      openLightbox(currentLightboxIndex - 1);
+    }
+  }
 });

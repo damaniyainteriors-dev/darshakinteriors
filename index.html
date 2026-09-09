@@ -410,7 +410,7 @@
         <!-- Service 1: Interior Design & Fitouts -->
         <div class="service-card">
           <div class="service-image-container">
-            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="Luxury Interior Design & Fitouts Mumbai">
+            <img src="assets/images/service_interior_fitouts.jpg" alt="Luxury Interior Design & Fitouts Mumbai" loading="lazy">
             <div class="service-image-overlay"></div>
             <div class="service-icon-badge">
               <i class="fa-solid fa-couch"></i>
@@ -437,7 +437,7 @@
         <!-- Service 2: Metal Fabrication -->
         <div class="service-card">
           <div class="service-image-container">
-            <img src="https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80" alt="Metal and Stainless Steel Fabrication in Mumbai">
+            <img src="assets/images/service_metal_fabrication.jpg" alt="Metal and Stainless Steel Fabrication in Mumbai" loading="lazy">
             <div class="service-image-overlay"></div>
             <div class="service-icon-badge">
               <i class="fa-solid fa-fire-burner"></i>
@@ -464,7 +464,7 @@
         <!-- Service 3: Civil Construction -->
         <div class="service-card">
           <div class="service-image-container">
-            <img src="https://images.unsplash.com/photo-1541888946425-d0fbb18015f5?auto=format&fit=crop&w=800&q=80" alt="Civil Construction Contractors Mumbai">
+            <img src="assets/images/service_civil_construction.jpg" alt="Civil Construction Contractors Mumbai" loading="lazy">
             <div class="service-image-overlay"></div>
             <div class="service-icon-badge">
               <i class="fa-solid fa-trowel-bricks"></i>
@@ -491,7 +491,7 @@
         <!-- Service 4: Custom Furniture -->
         <div class="service-card">
           <div class="service-image-container">
-            <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80" alt="Custom Handcrafted Furniture Mumbai">
+            <img src="assets/images/service_custom_furniture.jpg" alt="Custom Handcrafted Furniture Mumbai" loading="lazy">
             <div class="service-image-overlay"></div>
             <div class="service-icon-badge">
               <i class="fa-solid fa-chair"></i>
@@ -518,7 +518,7 @@
         <!-- Service 5: Renovation & Remodeling -->
         <div class="service-card">
           <div class="service-image-container">
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Turnkey Renovation &amp; Remodeling Services Mumbai">
+            <img src="assets/images/service_renovation_remodel.jpg" alt="Turnkey Renovation &amp; Remodeling Services Mumbai" loading="lazy">
             <div class="service-image-overlay"></div>
             <div class="service-icon-badge">
               <i class="fa-solid fa-wand-magic-sparkles"></i>
@@ -545,7 +545,7 @@
         <!-- Service 6: Industrial Sheds & Structural Work -->
         <div class="service-card">
           <div class="service-image-container">
-            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80" alt="Industrial Sheds and Custom Steel Fabrication Mumbai">
+            <img src="assets/images/service_industrial_sheds.jpg" alt="Industrial Sheds and Custom Steel Fabrication Mumbai" loading="lazy">
             <div class="service-image-overlay"></div>
             <div class="service-icon-badge">
               <i class="fa-solid fa-warehouse"></i>
@@ -595,7 +595,9 @@
 
       <!-- Filter Buttons -->
       <div class="portfolio-filters">
-        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn active" data-filter="all">All Media (21)</button>
+        <button class="filter-btn" data-filter="video"><i class="fa-solid fa-circle-play"></i> Project Videos (12)</button>
+        <button class="filter-btn" data-filter="photo"><i class="fa-solid fa-camera"></i> Site Photos (9)</button>
         <button class="filter-btn" data-filter="interior">Interiors</button>
         <button class="filter-btn" data-filter="fabrication">Metal Fabrication</button>
         <button class="filter-btn" data-filter="civil">Civil Work</button>
@@ -606,52 +608,41 @@
       <!-- Portfolio Grid -->
       <div class="portfolio-grid" id="portfolioGrid">
 
-        <!-- Project 1: Luxury Living Room Interior -->
-        <div class="portfolio-item" data-category="interior" data-desc="Contemporary luxury living room interior with custom gold metal accents, Italian marble flooring, and acoustic wooden fluted wall panels in Borivali West.">
+        <!-- Item 1: Video 1 - Interior -->
+        <div class="portfolio-item" data-category="interior" data-type="video" data-src="assets/gallery/videos/gallery_vid_1.mp4" data-desc="Bespoke luxury interior woodwork, fluted wall panels, warm cove profile lighting, and premium craftsmanship executed in Mumbai.">
           <div class="portfolio-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="Luxury Living Room Interior Design">
+            <video preload="metadata" muted playsinline src="assets/gallery/videos/gallery_vid_1.mp4#t=0.5"></video>
+            <div class="video-play-overlay"><i class="fa-solid fa-play"></i></div>
             <div class="portfolio-overlay">
-              <span class="portfolio-cat-badge">Interior Design</span>
-              <h4 class="portfolio-title">Luxury Living Room Fitout</h4>
+              <div class="portfolio-badges-row">
+                <span class="portfolio-cat-badge">Interior Design</span>
+                <span class="portfolio-type-badge type-video"><i class="fa-solid fa-video"></i> Video</span>
+              </div>
+              <h4 class="portfolio-title">Luxury Living Room Panelling</h4>
               <div class="portfolio-meta">
-                <span><i class="fa-solid fa-location-dot"></i> Borivali (W), Mumbai</span>
-                <span><i class="fa-solid fa-calendar"></i> Turnkey Handover</span>
+                <span><i class="fa-solid fa-location-dot"></i> Mumbai</span>
+                <span><i class="fa-solid fa-circle-play"></i> Project Video</span>
               </div>
             </div>
             <div class="portfolio-zoom-icon">
-              <i class="fa-solid fa-expand"></i>
+              <i class="fa-solid fa-play"></i>
             </div>
           </div>
         </div>
 
-        <!-- Project 2: Metal Fabrication -->
-        <div class="portfolio-item" data-category="fabrication" data-desc="Precision engineered SS 304 laser-cut entrance gate and architectural safety railing fabricated for a luxury residential property in Borivali East.">
+        <!-- Item 2: Image 1 - Metal Fabrication -->
+        <div class="portfolio-item" data-category="fabrication" data-type="image" data-src="assets/gallery/images/gallery_img_1.jpg" data-desc="Precision engineered stainless steel and mild steel architectural fabrication and safety structural installations by Darshak Damaniya Interior.">
           <div class="portfolio-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=800&q=80" alt="Architectural SS Gate & Railing Fabrication">
+            <img src="assets/gallery/images/gallery_img_1.jpg" alt="Precision Metal & SS Fabrication Mumbai" loading="lazy">
             <div class="portfolio-overlay">
-              <span class="portfolio-cat-badge">Metal Fabrication</span>
-              <h4 class="portfolio-title">Architectural SS Laser Gate</h4>
-              <div class="portfolio-meta">
-                <span><i class="fa-solid fa-location-dot"></i> Borivali (E), Mumbai</span>
-                <span><i class="fa-solid fa-calendar"></i> Completed</span>
+              <div class="portfolio-badges-row">
+                <span class="portfolio-cat-badge">Metal Fabrication</span>
+                <span class="portfolio-type-badge type-photo"><i class="fa-solid fa-camera"></i> Photo</span>
               </div>
-            </div>
-            <div class="portfolio-zoom-icon">
-              <i class="fa-solid fa-expand"></i>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 3: Civil Construction -->
-        <div class="portfolio-item" data-category="civil" data-desc="Complete structural RCC slab casting, brick masonry, and exterior weather-proof plastering executed for a commercial warehouse complex in Dahisar.">
-          <div class="portfolio-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1541888946425-d0fbb18015f5?auto=format&fit=crop&w=800&q=80" alt="Commercial RCC Civil Construction">
-            <div class="portfolio-overlay">
-              <span class="portfolio-cat-badge">Civil Work</span>
-              <h4 class="portfolio-title">Commercial RCC Structure</h4>
+              <h4 class="portfolio-title">Precision SS & MS Fabrication</h4>
               <div class="portfolio-meta">
                 <span><i class="fa-solid fa-location-dot"></i> Dahisar (E), Mumbai</span>
-                <span><i class="fa-solid fa-calendar"></i> Turnkey Handover</span>
+                <span><i class="fa-solid fa-image"></i> Site Photo</span>
               </div>
             </div>
             <div class="portfolio-zoom-icon">
@@ -660,16 +651,41 @@
           </div>
         </div>
 
-        <!-- Project 4: Custom Furniture -->
-        <div class="portfolio-item" data-category="furniture" data-desc="Bespoke solid teakwood conference table with matte black powder-coated structural steel legs and hidden cable management for a corporate office.">
+        <!-- Item 3: Video 2 - Fabrication -->
+        <div class="portfolio-item" data-category="fabrication" data-type="video" data-src="assets/gallery/videos/gallery_vid_2.mp4" data-desc="Heavy MS section structural framing, precision welding, and on-site assembly for residential and commercial structures.">
           <div class="portfolio-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=800&q=80" alt="Custom Wood & Metal Executive Furniture">
+            <video preload="metadata" muted playsinline src="assets/gallery/videos/gallery_vid_2.mp4#t=0.5"></video>
+            <div class="video-play-overlay"><i class="fa-solid fa-play"></i></div>
             <div class="portfolio-overlay">
-              <span class="portfolio-cat-badge">Custom Furniture</span>
-              <h4 class="portfolio-title">Industrial Wood-Steel Table</h4>
+              <div class="portfolio-badges-row">
+                <span class="portfolio-cat-badge">Metal Fabrication</span>
+                <span class="portfolio-type-badge type-video"><i class="fa-solid fa-video"></i> Video</span>
+              </div>
+              <h4 class="portfolio-title">Structural Metal Framework</h4>
               <div class="portfolio-meta">
-                <span><i class="fa-solid fa-location-dot"></i> Andheri West, Mumbai</span>
-                <span><i class="fa-solid fa-calendar"></i> Custom Built</span>
+                <span><i class="fa-solid fa-location-dot"></i> Mumbai</span>
+                <span><i class="fa-solid fa-circle-play"></i> Project Video</span>
+              </div>
+            </div>
+            <div class="portfolio-zoom-icon">
+              <i class="fa-solid fa-play"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4: Image 2 - Interior -->
+        <div class="portfolio-item" data-category="interior" data-type="image" data-src="assets/gallery/images/gallery_img_2.jpg" data-desc="Modern living room interior design with customized acoustic wooden panels and designer architectural finishes.">
+          <div class="portfolio-img-wrapper">
+            <img src="assets/gallery/images/gallery_img_2.jpg" alt="Contemporary Interior Living Space Mumbai" loading="lazy">
+            <div class="portfolio-overlay">
+              <div class="portfolio-badges-row">
+                <span class="portfolio-cat-badge">Interior Design</span>
+                <span class="portfolio-type-badge type-photo"><i class="fa-solid fa-camera"></i> Photo</span>
+              </div>
+              <h4 class="portfolio-title">Contemporary Living Space</h4>
+              <div class="portfolio-meta">
+                <span><i class="fa-solid fa-location-dot"></i> Borivali, Mumbai</span>
+                <span><i class="fa-solid fa-image"></i> Site Photo</span>
               </div>
             </div>
             <div class="portfolio-zoom-icon">
@@ -678,16 +694,41 @@
           </div>
         </div>
 
-        <!-- Project 5: Renovation -->
-        <div class="portfolio-item" data-category="renovation" data-desc="Full 3BHK luxury apartment renovation including kitchen remodeling, italian marble floor polish, wall structural strengthening, and lighting upgrades.">
+        <!-- Item 5: Video 3 - Custom Furniture -->
+        <div class="portfolio-item" data-category="furniture" data-type="video" data-src="assets/gallery/videos/gallery_vid_3.mp4" data-desc="Handcrafted modular storage, premium laminates, soft-close hardware, and precision woodcraft joinery.">
           <div class="portfolio-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Luxury Residential Apartment Renovation">
+            <video preload="metadata" muted playsinline src="assets/gallery/videos/gallery_vid_3.mp4#t=0.5"></video>
+            <div class="video-play-overlay"><i class="fa-solid fa-play"></i></div>
             <div class="portfolio-overlay">
-              <span class="portfolio-cat-badge">Renovation</span>
-              <h4 class="portfolio-title">3BHK Luxury Makeover</h4>
+              <div class="portfolio-badges-row">
+                <span class="portfolio-cat-badge">Custom Furniture</span>
+                <span class="portfolio-type-badge type-video"><i class="fa-solid fa-video"></i> Video</span>
+              </div>
+              <h4 class="portfolio-title">Modular Furniture & Woodcraft</h4>
               <div class="portfolio-meta">
-                <span><i class="fa-solid fa-location-dot"></i> Kandivali (W), Mumbai</span>
-                <span><i class="fa-solid fa-calendar"></i> Full Remodel</span>
+                <span><i class="fa-solid fa-location-dot"></i> Mumbai</span>
+                <span><i class="fa-solid fa-circle-play"></i> Project Video</span>
+              </div>
+            </div>
+            <div class="portfolio-zoom-icon">
+              <i class="fa-solid fa-play"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 6: Image 3 - Fabrication -->
+        <div class="portfolio-item" data-category="fabrication" data-type="image" data-src="assets/gallery/images/gallery_img_3.jpg" data-desc="Custom CNC laser-cut SS 304 safety gates with anti-rust gold and matte black finish.">
+          <div class="portfolio-img-wrapper">
+            <img src="assets/gallery/images/gallery_img_3.jpg" alt="Architectural SS Laser-Cut Gate Mumbai" loading="lazy">
+            <div class="portfolio-overlay">
+              <div class="portfolio-badges-row">
+                <span class="portfolio-cat-badge">Metal Fabrication</span>
+                <span class="portfolio-type-badge type-photo"><i class="fa-solid fa-camera"></i> Photo</span>
+              </div>
+              <h4 class="portfolio-title">Laser-Cut SS Architectural Gate</h4>
+              <div class="portfolio-meta">
+                <span><i class="fa-solid fa-location-dot"></i> Kandivali, Mumbai</span>
+                <span><i class="fa-solid fa-image"></i> Site Photo</span>
               </div>
             </div>
             <div class="portfolio-zoom-icon">
@@ -696,16 +737,41 @@
           </div>
         </div>
 
-        <!-- Project 6: Interior Work (Mezzanine Floor) -->
-        <div class="portfolio-item" data-category="interior" data-desc="Heavy structural steel mezzanine floor and acoustic glass-aluminum partitions installed inside a 4,000 sq ft industrial facility in Mira Road.">
+        <!-- Item 7: Video 4 - Renovation -->
+        <div class="portfolio-item" data-category="renovation" data-type="video" data-src="assets/gallery/videos/gallery_vid_4.mp4" data-desc="Full apartment remodeling, structural wall preparation, and premium plaster punning under execution.">
           <div class="portfolio-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Industrial Mezzanine Floor & Structural Partitions">
+            <video preload="metadata" muted playsinline src="assets/gallery/videos/gallery_vid_4.mp4#t=0.5"></video>
+            <div class="video-play-overlay"><i class="fa-solid fa-play"></i></div>
             <div class="portfolio-overlay">
-              <span class="portfolio-cat-badge">Interior &amp; Structure</span>
-              <h4 class="portfolio-title">Steel Mezzanine &amp; Partitions</h4>
+              <div class="portfolio-badges-row">
+                <span class="portfolio-cat-badge">Renovation</span>
+                <span class="portfolio-type-badge type-video"><i class="fa-solid fa-video"></i> Video</span>
+              </div>
+              <h4 class="portfolio-title">Site Renovation & Wall Finishing</h4>
               <div class="portfolio-meta">
-                <span><i class="fa-solid fa-location-dot"></i> Mira Road, Mumbai</span>
-                <span><i class="fa-solid fa-calendar"></i> Industrial Fitout</span>
+                <span><i class="fa-solid fa-location-dot"></i> Mumbai</span>
+                <span><i class="fa-solid fa-circle-play"></i> Project Video</span>
+              </div>
+            </div>
+            <div class="portfolio-zoom-icon">
+              <i class="fa-solid fa-play"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 8: Image 4 - Civil Work -->
+        <div class="portfolio-item" data-category="civil" data-type="image" data-src="assets/gallery/images/gallery_img_4.jpg" data-desc="High-durability RCC casting, masonry walls, waterproofing, and structural finishing.">
+          <div class="portfolio-img-wrapper">
+            <img src="assets/gallery/images/gallery_img_4.jpg" alt="Commercial RCC Civil Construction Mumbai" loading="lazy">
+            <div class="portfolio-overlay">
+              <div class="portfolio-badges-row">
+                <span class="portfolio-cat-badge">Civil Work</span>
+                <span class="portfolio-type-badge type-photo"><i class="fa-solid fa-camera"></i> Photo</span>
+              </div>
+              <h4 class="portfolio-title">RCC Civil Construction Work</h4>
+              <div class="portfolio-meta">
+                <span><i class="fa-solid fa-location-dot"></i> Dahisar, Mumbai</span>
+                <span><i class="fa-solid fa-image"></i> Site Photo</span>
               </div>
             </div>
             <div class="portfolio-zoom-icon">
@@ -714,16 +780,41 @@
           </div>
         </div>
 
-        <!-- Project 7: Metal Fabrication (Industrial Shed) -->
-        <div class="portfolio-item" data-category="fabrication" data-desc="Fabrication and complete on-site erection of a 6,500 sq ft heavy warehouse steel truss roof with color-coated roofing sheets and turbo ventilators.">
+        <!-- Item 9: Video 5 - Fabrication -->
+        <div class="portfolio-item" data-category="fabrication" data-type="video" data-src="assets/gallery/videos/gallery_vid_5.mp4" data-desc="Robust MS square pipe framing, heavy hinges, and heavy-duty industrial security gates fabrication.">
           <div class="portfolio-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80" alt="Industrial Warehouse Steel Truss Shed">
+            <video preload="metadata" muted playsinline src="assets/gallery/videos/gallery_vid_5.mp4#t=0.5"></video>
+            <div class="video-play-overlay"><i class="fa-solid fa-play"></i></div>
             <div class="portfolio-overlay">
-              <span class="portfolio-cat-badge">Metal Fabrication</span>
-              <h4 class="portfolio-title">Heavy Warehouse Steel Shed</h4>
+              <div class="portfolio-badges-row">
+                <span class="portfolio-cat-badge">Metal Fabrication</span>
+                <span class="portfolio-type-badge type-video"><i class="fa-solid fa-video"></i> Video</span>
+              </div>
+              <h4 class="portfolio-title">Heavy Duty MS Gate Welding</h4>
               <div class="portfolio-meta">
-                <span><i class="fa-solid fa-location-dot"></i> Vasai Industrial Area</span>
-                <span><i class="fa-solid fa-calendar"></i> Heavy Truss</span>
+                <span><i class="fa-solid fa-location-dot"></i> Mumbai</span>
+                <span><i class="fa-solid fa-circle-play"></i> Project Video</span>
+              </div>
+            </div>
+            <div class="portfolio-zoom-icon">
+              <i class="fa-solid fa-play"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 10: Image 5 - Interior -->
+        <div class="portfolio-item" data-category="interior" data-type="image" data-src="assets/gallery/images/gallery_img_5.jpg" data-desc="Gypsum false ceiling with concealed warm LED strip lighting and architectural clean lines.">
+          <div class="portfolio-img-wrapper">
+            <img src="assets/gallery/images/gallery_img_5.jpg" alt="Designer False Ceiling & Lighting Mumbai" loading="lazy">
+            <div class="portfolio-overlay">
+              <div class="portfolio-badges-row">
+                <span class="portfolio-cat-badge">Interior Design</span>
+                <span class="portfolio-type-badge type-photo"><i class="fa-solid fa-camera"></i> Photo</span>
+              </div>
+              <h4 class="portfolio-title">Designer False Ceiling & Lighting</h4>
+              <div class="portfolio-meta">
+                <span><i class="fa-solid fa-location-dot"></i> Andheri (W), Mumbai</span>
+                <span><i class="fa-solid fa-image"></i> Site Photo</span>
               </div>
             </div>
             <div class="portfolio-zoom-icon">
@@ -732,16 +823,41 @@
           </div>
         </div>
 
-        <!-- Project 8: Custom Furniture (Modular Wardrobe) -->
-        <div class="portfolio-item" data-category="furniture" data-desc="Floor-to-ceiling modular wardrobe unit with integrated warm LED profile lighting, brushed gold aluminum edge profiles, and hydraulic soft-close hinges.">
+        <!-- Item 11: Video 6 - Interior -->
+        <div class="portfolio-item" data-category="interior" data-type="video" data-src="assets/gallery/videos/gallery_vid_6.mp4" data-desc="Integrated smart lighting setup with clean plaster ceilings and luxury perimeter cove illumination.">
           <div class="portfolio-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80" alt="Luxury Modular Wardrobe & Storage Design">
+            <video preload="metadata" muted playsinline src="assets/gallery/videos/gallery_vid_6.mp4#t=0.5"></video>
+            <div class="video-play-overlay"><i class="fa-solid fa-play"></i></div>
             <div class="portfolio-overlay">
-              <span class="portfolio-cat-badge">Furniture</span>
-              <h4 class="portfolio-title">Luxury Modular Wardrobe</h4>
+              <div class="portfolio-badges-row">
+                <span class="portfolio-cat-badge">Interior Design</span>
+                <span class="portfolio-type-badge type-video"><i class="fa-solid fa-video"></i> Video</span>
+              </div>
+              <h4 class="portfolio-title">Ambient Lighting & Ceiling Fitout</h4>
               <div class="portfolio-meta">
-                <span><i class="fa-solid fa-location-dot"></i> Dahisar (E), Mumbai</span>
-                <span><i class="fa-solid fa-calendar"></i> Handcrafted</span>
+                <span><i class="fa-solid fa-location-dot"></i> Mumbai</span>
+                <span><i class="fa-solid fa-circle-play"></i> Project Video</span>
+              </div>
+            </div>
+            <div class="portfolio-zoom-icon">
+              <i class="fa-solid fa-play"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 12: Image 6 - Fabrication -->
+        <div class="portfolio-item" data-category="fabrication" data-type="image" data-src="assets/gallery/images/gallery_img_6.jpg" data-desc="Heavy structural steel beams, I-section pillars, and industrial warehouse framework.">
+          <div class="portfolio-img-wrapper">
+            <img src="assets/gallery/images/gallery_img_6.jpg" alt="Industrial Steel Mezzanine & Truss Work Mumbai" loading="lazy">
+            <div class="portfolio-overlay">
+              <div class="portfolio-badges-row">
+                <span class="portfolio-cat-badge">Metal Fabrication</span>
+                <span class="portfolio-type-badge type-photo"><i class="fa-solid fa-camera"></i> Photo</span>
+              </div>
+              <h4 class="portfolio-title">Industrial Steel Mezzanine Work</h4>
+              <div class="portfolio-meta">
+                <span><i class="fa-solid fa-location-dot"></i> Vasai, Mumbai</span>
+                <span><i class="fa-solid fa-image"></i> Site Photo</span>
               </div>
             </div>
             <div class="portfolio-zoom-icon">
@@ -750,20 +866,197 @@
           </div>
         </div>
 
-        <!-- Project 9: Renovation (Office Retrofit) -->
-        <div class="portfolio-item" data-category="renovation" data-desc="Complete commercial office remodel featuring acoustic ceiling installation, heavy safety glass entrance doors, electrical rewiring, and reception desk fabrication.">
+        <!-- Item 13: Video 7 - Interior -->
+        <div class="portfolio-item" data-category="interior" data-type="video" data-src="assets/gallery/videos/gallery_vid_7.mp4" data-desc="Comprehensive turnkey luxury residential interior showcase including master bedroom, hall, and living spaces.">
           <div class="portfolio-img-wrapper">
-            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Commercial Office Modern Renovation">
+            <video preload="metadata" muted playsinline src="assets/gallery/videos/gallery_vid_7.mp4#t=0.5"></video>
+            <div class="video-play-overlay"><i class="fa-solid fa-play"></i></div>
             <div class="portfolio-overlay">
-              <span class="portfolio-cat-badge">Renovation</span>
-              <h4 class="portfolio-title">Modern Office Retrofit</h4>
+              <div class="portfolio-badges-row">
+                <span class="portfolio-cat-badge">Interior Design</span>
+                <span class="portfolio-type-badge type-video"><i class="fa-solid fa-video"></i> Video</span>
+              </div>
+              <h4 class="portfolio-title">Full Luxury Interior Walkthrough</h4>
               <div class="portfolio-meta">
-                <span><i class="fa-solid fa-location-dot"></i> Malad (W), Mumbai</span>
-                <span><i class="fa-solid fa-calendar"></i> Commercial Handover</span>
+                <span><i class="fa-solid fa-location-dot"></i> Mumbai</span>
+                <span><i class="fa-solid fa-circle-play"></i> Project Video</span>
+              </div>
+            </div>
+            <div class="portfolio-zoom-icon">
+              <i class="fa-solid fa-play"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 14: Image 7 - Custom Furniture -->
+        <div class="portfolio-item" data-category="furniture" data-type="image" data-src="assets/gallery/images/gallery_img_7.jpg" data-desc="Floor-to-ceiling modular wardrobe unit with profile handles and luxury veneer finish.">
+          <div class="portfolio-img-wrapper">
+            <img src="assets/gallery/images/gallery_img_7.jpg" alt="Bespoke Wardrobe & Storage Cabinetry Mumbai" loading="lazy">
+            <div class="portfolio-overlay">
+              <div class="portfolio-badges-row">
+                <span class="portfolio-cat-badge">Custom Furniture</span>
+                <span class="portfolio-type-badge type-photo"><i class="fa-solid fa-camera"></i> Photo</span>
+              </div>
+              <h4 class="portfolio-title">Bespoke Wardrobe & Cabinetry</h4>
+              <div class="portfolio-meta">
+                <span><i class="fa-solid fa-location-dot"></i> Malad, Mumbai</span>
+                <span><i class="fa-solid fa-image"></i> Site Photo</span>
               </div>
             </div>
             <div class="portfolio-zoom-icon">
               <i class="fa-solid fa-expand"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 15: Video 8 - Fabrication -->
+        <div class="portfolio-item" data-category="fabrication" data-type="video" data-src="assets/gallery/videos/gallery_vid_8.mp4" data-desc="Toughened glass balcony railing with stainless steel spigots and top handrail.">
+          <div class="portfolio-img-wrapper">
+            <video preload="metadata" muted playsinline src="assets/gallery/videos/gallery_vid_8.mp4#t=0.5"></video>
+            <div class="video-play-overlay"><i class="fa-solid fa-play"></i></div>
+            <div class="portfolio-overlay">
+              <div class="portfolio-badges-row">
+                <span class="portfolio-cat-badge">Metal Fabrication</span>
+                <span class="portfolio-type-badge type-video"><i class="fa-solid fa-video"></i> Video</span>
+              </div>
+              <h4 class="portfolio-title">Precision SS Railing & Glass Work</h4>
+              <div class="portfolio-meta">
+                <span><i class="fa-solid fa-location-dot"></i> Mumbai</span>
+                <span><i class="fa-solid fa-circle-play"></i> Project Video</span>
+              </div>
+            </div>
+            <div class="portfolio-zoom-icon">
+              <i class="fa-solid fa-play"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 16: Image 8 - Renovation -->
+        <div class="portfolio-item" data-category="renovation" data-type="image" data-src="assets/gallery/images/gallery_img_8.jpg" data-desc="Turnkey home renovation featuring vitrified marble finish flooring and custom woodwork.">
+          <div class="portfolio-img-wrapper">
+            <img src="assets/gallery/images/gallery_img_8.jpg" alt="Complete Residential Makeover & Flooring Mumbai" loading="lazy">
+            <div class="portfolio-overlay">
+              <div class="portfolio-badges-row">
+                <span class="portfolio-cat-badge">Renovation</span>
+                <span class="portfolio-type-badge type-photo"><i class="fa-solid fa-camera"></i> Photo</span>
+              </div>
+              <h4 class="portfolio-title">Residential Makeover & Flooring</h4>
+              <div class="portfolio-meta">
+                <span><i class="fa-solid fa-location-dot"></i> Goregaon, Mumbai</span>
+                <span><i class="fa-solid fa-image"></i> Site Photo</span>
+              </div>
+            </div>
+            <div class="portfolio-zoom-icon">
+              <i class="fa-solid fa-expand"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 17: Video 9 - Custom Furniture -->
+        <div class="portfolio-item" data-category="furniture" data-type="video" data-src="assets/gallery/videos/gallery_vid_9.mp4" data-desc="Acrylic finish modular kitchen shutters, stainless steel tandem boxes, and quartz countertop.">
+          <div class="portfolio-img-wrapper">
+            <video preload="metadata" muted playsinline src="assets/gallery/videos/gallery_vid_9.mp4#t=0.5"></video>
+            <div class="video-play-overlay"><i class="fa-solid fa-play"></i></div>
+            <div class="portfolio-overlay">
+              <div class="portfolio-badges-row">
+                <span class="portfolio-cat-badge">Custom Furniture</span>
+                <span class="portfolio-type-badge type-video"><i class="fa-solid fa-video"></i> Video</span>
+              </div>
+              <h4 class="portfolio-title">Modular Kitchen & Storage Fitting</h4>
+              <div class="portfolio-meta">
+                <span><i class="fa-solid fa-location-dot"></i> Mumbai</span>
+                <span><i class="fa-solid fa-circle-play"></i> Project Video</span>
+              </div>
+            </div>
+            <div class="portfolio-zoom-icon">
+              <i class="fa-solid fa-play"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 18: Image 9 - Civil Work -->
+        <div class="portfolio-item" data-category="civil" data-type="image" data-src="assets/gallery/images/gallery_img_9.jpg" data-desc="Quality brickwork masonry, plastering, plumbing conduit lines, and structural repairs.">
+          <div class="portfolio-img-wrapper">
+            <img src="assets/gallery/images/gallery_img_9.jpg" alt="Site Civil Contracting & Brickwork Mumbai" loading="lazy">
+            <div class="portfolio-overlay">
+              <div class="portfolio-badges-row">
+                <span class="portfolio-cat-badge">Civil Work</span>
+                <span class="portfolio-type-badge type-photo"><i class="fa-solid fa-camera"></i> Photo</span>
+              </div>
+              <h4 class="portfolio-title">Site Civil Contracting & Masonry</h4>
+              <div class="portfolio-meta">
+                <span><i class="fa-solid fa-location-dot"></i> Mumbai</span>
+                <span><i class="fa-solid fa-image"></i> Site Photo</span>
+              </div>
+            </div>
+            <div class="portfolio-zoom-icon">
+              <i class="fa-solid fa-expand"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 19: Video 10 - Civil Work -->
+        <div class="portfolio-item" data-category="civil" data-type="video" data-src="assets/gallery/videos/gallery_vid_10.mp4" data-desc="Commercial office partitioning, soundproofing, and turnkey civil fitout execution.">
+          <div class="portfolio-img-wrapper">
+            <video preload="metadata" muted playsinline src="assets/gallery/videos/gallery_vid_10.mp4#t=0.5"></video>
+            <div class="video-play-overlay"><i class="fa-solid fa-play"></i></div>
+            <div class="portfolio-overlay">
+              <div class="portfolio-badges-row">
+                <span class="portfolio-cat-badge">Civil Work</span>
+                <span class="portfolio-type-badge type-video"><i class="fa-solid fa-video"></i> Video</span>
+              </div>
+              <h4 class="portfolio-title">Commercial Civil & Partitions</h4>
+              <div class="portfolio-meta">
+                <span><i class="fa-solid fa-location-dot"></i> Mumbai</span>
+                <span><i class="fa-solid fa-circle-play"></i> Project Video</span>
+              </div>
+            </div>
+            <div class="portfolio-zoom-icon">
+              <i class="fa-solid fa-play"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 20: Video 11 - Metal Fabrication -->
+        <div class="portfolio-item" data-category="fabrication" data-type="video" data-src="assets/gallery/videos/gallery_vid_11.mp4" data-desc="High-span tubular steel trusses, purlins, and heavy industrial roofing construction.">
+          <div class="portfolio-img-wrapper">
+            <video preload="metadata" muted playsinline src="assets/gallery/videos/gallery_vid_11.mp4#t=0.5"></video>
+            <div class="video-play-overlay"><i class="fa-solid fa-play"></i></div>
+            <div class="portfolio-overlay">
+              <div class="portfolio-badges-row">
+                <span class="portfolio-cat-badge">Metal Fabrication</span>
+                <span class="portfolio-type-badge type-video"><i class="fa-solid fa-video"></i> Video</span>
+              </div>
+              <h4 class="portfolio-title">Industrial Shed Truss Erection</h4>
+              <div class="portfolio-meta">
+                <span><i class="fa-solid fa-location-dot"></i> Mumbai</span>
+                <span><i class="fa-solid fa-circle-play"></i> Project Video</span>
+              </div>
+            </div>
+            <div class="portfolio-zoom-icon">
+              <i class="fa-solid fa-play"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 21: Video 12 - Renovation -->
+        <div class="portfolio-item" data-category="renovation" data-type="video" data-src="assets/gallery/videos/gallery_vid_12.mp4" data-desc="Completed turnkey project ready for client handover with 100% quality assurance by Darshak Damaniya Interior.">
+          <div class="portfolio-img-wrapper">
+            <video preload="metadata" muted playsinline src="assets/gallery/videos/gallery_vid_12.mp4#t=0.5"></video>
+            <div class="video-play-overlay"><i class="fa-solid fa-play"></i></div>
+            <div class="portfolio-overlay">
+              <div class="portfolio-badges-row">
+                <span class="portfolio-cat-badge">Renovation</span>
+                <span class="portfolio-type-badge type-video"><i class="fa-solid fa-video"></i> Video</span>
+              </div>
+              <h4 class="portfolio-title">Final Handover & Quality Review</h4>
+              <div class="portfolio-meta">
+                <span><i class="fa-solid fa-location-dot"></i> Mumbai</span>
+                <span><i class="fa-solid fa-circle-play"></i> Project Video</span>
+              </div>
+            </div>
+            <div class="portfolio-zoom-icon">
+              <i class="fa-solid fa-play"></i>
             </div>
           </div>
         </div>
@@ -776,21 +1069,25 @@
   <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true">
     <div class="lightbox-content">
       <button class="lightbox-close" id="lightboxClose" aria-label="Close Gallery"><i class="fa-solid fa-xmark"></i></button>
-      <button class="lightbox-nav-btn lightbox-prev" id="lightboxPrev" aria-label="Previous Image"><i class="fa-solid fa-chevron-left"></i></button>
-      <button class="lightbox-nav-btn lightbox-next" id="lightboxNext" aria-label="Next Image"><i class="fa-solid fa-chevron-right"></i></button>
+      <button class="lightbox-nav-btn lightbox-prev" id="lightboxPrev" aria-label="Previous Media"><i class="fa-solid fa-chevron-left"></i></button>
+      <button class="lightbox-nav-btn lightbox-next" id="lightboxNext" aria-label="Next Media"><i class="fa-solid fa-chevron-right"></i></button>
       
       <div class="lightbox-img-box">
-        <img src="" alt="Full view project image" id="lightboxImg">
+        <img src="" alt="Full view project image" id="lightboxImg" style="display: none;">
+        <video id="lightboxVideo" controls playsinline preload="auto" style="display: none;"></video>
       </div>
 
       <div class="lightbox-details">
         <div class="lightbox-info">
-          <span class="portfolio-cat-badge" id="lightboxCat">Darshak Damaniya Interior</span>
+          <div class="portfolio-badges-row" style="margin-bottom: 6px;">
+            <span class="portfolio-cat-badge" id="lightboxCat">Darshak Damaniya Interior</span>
+            <span class="portfolio-type-badge" id="lightboxType">Photo</span>
+          </div>
           <h3 id="lightboxTitle">Project Title</h3>
           <p id="lightboxDesc">Project detailed description goes here.</p>
         </div>
         <a href="https://wa.me/919867819387" target="_blank" class="btn btn-whatsapp" id="lightboxWaBtn">
-          <i class="fa-brands fa-whatsapp"></i> Inquire This Design
+          <i class="fa-brands fa-whatsapp"></i> Inquire This Work
         </a>
       </div>
     </div>

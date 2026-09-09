@@ -404,8 +404,10 @@
     margin: 15px;
   }
 
-  .lightbox-img-box img {
-    height: 300px;
+  .lightbox-img-box img,
+  .lightbox-img-box video {
+    max-height: 320px;
+    height: auto;
   }
 
   .lightbox-details {
