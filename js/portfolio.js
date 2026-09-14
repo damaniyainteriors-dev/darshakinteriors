@@ -113,12 +113,14 @@ document.addEventListener('DOMContentLoaded', () => {
       if (lightboxImg) lightboxImg.style.display = 'none';
       if (lightboxVideo) {
         lightboxVideo.style.display = 'block';
+        lightboxVideo.muted = true;
+        lightboxVideo.defaultMuted = true;
         lightboxVideo.src = mediaSrc;
         lightboxVideo.load();
         const playPromise = lightboxVideo.play();
         if (playPromise !== undefined) {
           playPromise.catch(() => {
-            // Autoplay with sound may be blocked by browser policy until user gesture
+            // Autoplay handling
           });
         }
       }
