@@ -451,6 +451,12 @@
     height: 40px;
   }
 
+  .brand-logo-img {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+  }
+
   .logo-badge-text {
     font-size: 1.1rem;
   }

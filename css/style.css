@@ -418,6 +418,24 @@ img {
   flex-shrink: 0;
 }
 
+.brand-logo-img {
+  width: 46px;
+  height: 46px;
+  min-width: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid var(--gold-primary);
+  box-shadow: 0 3px 12px rgba(184, 134, 11, 0.25);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  background: #000000;
+  flex-shrink: 0;
+}
+
+.brand-logo:hover .brand-logo-img {
+  transform: scale(1.08) rotate(3deg);
+  box-shadow: 0 4px 18px rgba(184, 134, 11, 0.45);
+}
+
 .logo-badge {
   width: 44px;
   height: 44px;
