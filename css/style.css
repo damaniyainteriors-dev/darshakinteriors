@@ -118,9 +118,10 @@ img {
 
 /* Gold Gradient Text */
 .gold-text {
-  background: var(--gold-gradient);
+  background: linear-gradient(135deg, #d4af37 0%, #e6b800 40%, #c59b27 75%, #b8860b 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: var(--gold-primary);
   display: inline-block;
   font-weight: 800;
 }
